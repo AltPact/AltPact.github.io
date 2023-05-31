@@ -1,34 +1,30 @@
-import React, {useState}  from 'react'
+import React, {useState, useEffect}  from 'react'
 import { PrimaryNav, MenuLink, Menu, Hamburger } from './NavElement'
 import { Link } from 'react-router-dom';
-// const Navbar = () => {
-//     return (
-//         <>
-//             <PrimaryNav>
-//                 <Hamburger />
-//                 <Menu>
-//                     <MenuLink to="/home" activeStyle>
-//                         Home
-//                     </MenuLink>
-//                     <MenuLink to="/about" activeStyle>
-//                         About
-//                     </MenuLink>
-//                     <MenuLink to="/articles" activeStyle>
-//                         Articles
-//                     </MenuLink>
-//                     <MenuLink to="/blog" activeStyle>
-//                         Blog
-//                     </MenuLink>
-//                 </Menu>
-//             </PrimaryNav>
-//         </>
-//     )
-// }
+// import { Button } from 'bootstrap';
+import { Button } from '../Button'
+import './Navbar.css'
 
 function Navbar() {
     const [click, setClick] = useState(false); //Variables to change state
+    const [button, setButton] = useState(true);
+
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
+
+    const showButton = () => {
+        if(window.innerWidth <= 960) {
+            setButton(false);
+        } else {
+            setButton(true);
+        }
+    };
+
+    useEffect(() => {
+        showButton()
+    },[]);
+    
+    window.addEventListener('resize', showButton);
     return (
         <>
             <nav className='navbar"'>
@@ -36,10 +32,11 @@ function Navbar() {
                     <Link to='/' className='navbar-logo'>
                         TRVL <i className='fab fa-typo3' />
                     </Link>
+                    {/* Creates button that can expand navbar for mobile user */}
                     <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                        <i className={click ? 'fa fa-times' : 'fa fa-bars'} />
                     </div>
-                    <ul className={click ? 'nav-menu-active' : 'nav-menu'}>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                                 Home
@@ -60,11 +57,20 @@ function Navbar() {
                                 About
                             </Link>
                         </li>
+                        <li>
+                            <Link
+                                to='/sign-up'
+                                className='nav-links-mobile'
+                                onClick={closeMobileMenu}>
+                                Sign Up
+                            </Link>
+                        </li>
                     </ul>
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
             </nav>
         </>
-    )
+    );
 }
 
 export default Navbar
