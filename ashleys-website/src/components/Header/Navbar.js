@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import { Button } from 'bootstrap';
 import { Button } from '../Button'
 import './Navbar.css'
+import AshTech from '../../icons/AshTech.tsx'
 
 function Navbar() {
     const [click, setClick] = useState(false); //Variables to change state
@@ -30,7 +31,9 @@ function Navbar() {
             <nav className='navbar"'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo'>
-                        TRVL <i className='fab fa-typo3' />
+                        AshTech Ventures 
+                        {/* <i className='fab fa-typo3' /> */}
+                        {/* <AshTech/> */}
                     </Link>
                     {/* Creates button that can expand navbar for mobile user */}
                     <div className='menu-icon' onClick={handleClick}>

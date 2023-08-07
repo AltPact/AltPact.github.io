@@ -6,7 +6,7 @@ var Latex = require("react-latex")
 function Blog() {
   return (
     <body>
-    <div class="container">
+    {/* <div class="container">
         <h1>FormSubmit</h1>
         <form target="_blank" action="https://formsubmit.co/arikashley@gmail.com" method="POST">
           <div class="form-group">
@@ -24,7 +24,7 @@ function Blog() {
           </div>
           <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
         </form>
-      </div>
+      </div> */}
     </body> 
   )
 }
