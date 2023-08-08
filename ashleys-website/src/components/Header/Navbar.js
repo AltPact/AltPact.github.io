@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // import { Button } from 'bootstrap';
 import { Button } from '../Button'
 import './Navbar.css'
-import AshTech from '../../icons/AshTech.tsx'
+// import AshTech from '../../icons/AshTech.tsx'
 
 function Navbar() {
     const [click, setClick] = useState(false); //Variables to change state
@@ -53,6 +53,11 @@ function Navbar() {
                         <li className='nav-item'>
                             <Link to='/blog' className='nav-links' onClick={closeMobileMenu}>
                                 Blog
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/projects/1' className='nav-links' onClick={closeMobileMenu}>
+                                Projects
                             </Link>
                         </li>
                         <li className='nav-item'>

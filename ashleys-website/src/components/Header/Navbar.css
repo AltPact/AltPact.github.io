@@ -37,7 +37,7 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto); /*If you want to add extra links to the navbar, increase this*/
     grid-gap: 10px;
     list-style: none;
     text-align: center;

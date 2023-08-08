@@ -17,9 +17,28 @@ const Article = ({ title, content, tag }) => {
     <div className="article">
       <h2>{title}</h2>
       <p>{content}</p>
-      <div className='tag'>{tag}</div>
+      if (tag == "games") {
+        <div className='tag.green'>{tag}</div>
+      } else {
+        
+      }
+      <p>{tag}</p>
     </div>
   );
+};
+
+function tagParameter(params) {
+  if (params == "games") {
+    return (
+      <div className='tag.green'>{tag}</div>
+    )
+  } else if (params == "pie"){
+      <div className='tag.orange'>{tag}</div>
+  } else {
+    return (
+      <div className='tag.blue'>{tag}</div>
+    )
+  }
 };
 // function Article(){
 //   const Articles = ({ title, content }) => {
