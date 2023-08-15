@@ -13,19 +13,7 @@ import Projects from './components/Pages/Projects'
 import projectData from './components/Pages/projectData';
 // import articleLatex from './LatexFolder/latex'
 
-function App() { 
-  // const projectData = {
-  //   imageSrc: 'path/to/your/project-image.jpg',
-  //   title: 'Sample Project',
-  //   downloadLink: 'path/to/your/project-download-link',
-  //   subsections: [
-  //     'Introduction',
-  //     'Methodology',
-  //     'Results',
-  //     'Conclusion',
-  //     // Add more subsections as needed
-  //   ],
-  // };
+function App() {
   return (
       <BrowserRouter>
           <Navbar/>
