@@ -11,9 +11,9 @@ export default function Navbar() {
             <h3>Logo</h3>
             <nav className={clsx(drawerOpen && "responsive_nav")}>
                 <a href="/#">Home</a>
-                <a href="/#">My Work</a>
-                <a href="/#">Blog</a>
-                <a href="/#">About me</a>
+                <a href="/my-work">My Work</a>
+                <a href="/blogs">Blog</a>
+                <a href="/about-me">About me</a>
                 <button
                     className="nav-btn nav-close-btn"
                     onClick={toggleDrawer}>
