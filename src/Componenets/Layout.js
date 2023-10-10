@@ -10,7 +10,7 @@ const Layout = () => {
 
     return (
         <>
-            <nav>
+            {/* <nav>
             <ul>
                 {links.map((link, index) => (
                 <li key={index}>
@@ -18,7 +18,7 @@ const Layout = () => {
                 </li>
                 ))}
             </ul>
-            </nav>
+            </nav> */}
 
             <Outlet />
         </>

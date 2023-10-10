@@ -3,30 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Componenets/Home';
-import Blogs from './Componenets/Blogs';
-// import MyWork from './Componenets/MyWork';
-import NoPage from './Componenets/NoPage';
-import Layout from './Componenets/Layout';
-import MyWork from './Componenets/MyWork';
-import AboutMe from './Componenets/AboutMe'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="my-work" element={<MyWork />} />
-          <Route path="Blogs" element={<Blogs />} />
-          <Route path="about-me" element={<AboutMe />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-    </Routes>
-    </BrowserRouter>
   </React.StrictMode>
 );
 
